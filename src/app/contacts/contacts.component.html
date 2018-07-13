@@ -1,0 +1,6 @@
+<div class="col-md-12 mt-3" id="contacts">
+  <div class="list-group" id="myList" role="tablist">
+    <a class="list-group-item list-group-item-action" [ngClass]="{'active': contact.active}" data-toggle="list" role="tab" *ngFor="let contact of contacts | searchPipe:'name':searchTerm; let index=$index"
+      (click)="selectContact(contact, index)">{{contact.name}}</a>
+  </div>
+</div>

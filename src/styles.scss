@@ -1,0 +1,17 @@
+/* You can add global styles to this file, and also import other style files */
+#header {
+    input[type="text"] {
+        border-radius: 20px;
+    }
+}
+
+#content {
+    table {
+        line-height: .5;
+    }
+}
+#contacts {
+    .list-group-item.active {
+        background-color: transparent !important;
+    }
+}

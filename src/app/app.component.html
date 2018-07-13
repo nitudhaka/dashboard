@@ -1,0 +1,12 @@
+<div class="container">
+
+  <div class="row">
+    <app-header (search)="setSearch($event)" class="col-md-12"></app-header>
+  </div>
+
+  <div class="row">
+    <app-contacts class="col-md-3" (selectedContact)="onSelect($event)" [searchTerm]="sValue"></app-contacts>
+    <app-content class="col-md-9" [contactInfo]="contactInfo"></app-content>
+  </div>
+
+</div>

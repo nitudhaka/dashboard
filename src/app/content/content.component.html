@@ -1,0 +1,44 @@
+<div id='content' class="col-md-12 mt-3" *ngIf="contactInfo.id">
+  <div class="col-md-12">
+    Chat with {{contactInfo.name}}
+  </div>
+
+  <div class="col-md-12 d-inline-flex">
+    <div class="col-md-2 p-0">
+      <img src="{{contactInfo.photo}}" alt="photo" width="80px" height="80px">
+    </div>
+    <div class="col-md-3 pl-5 d-inline-block">
+      <button class="col-md-12 btn btn-primary" (click)="open()">Send Message</button>
+      <div class="col-md-12 p-0">
+        <app-rating [currentRate]="contactInfo.rating"></app-rating>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-12 pt-3">
+    <div class="alert alert-primary" role="alert">
+      {{contactInfo.desc}}
+    </div>
+  </div>
+
+  <div class="col-md-12 pt-3 ">
+    <table class="table table-striped table-bordered">
+      <thead>
+        <tr>
+          <th scope="col">Likes</th>
+          <th scope="col">Dislikes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let val of contactInfo.interests">
+          <td>{{val.like}}</td>
+          <td>{{val.dislike}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<div *ngIf="!contactInfo.id">
+  Please select a person
+</div>

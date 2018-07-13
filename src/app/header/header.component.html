@@ -1,0 +1,16 @@
+<div class="col-md-12">&nbsp;</div>
+<div class="col-md-12" id="header">
+  <input (ngModelChange)="onSearch($event)" class="col-md-3" type="text" name="searchbox" [(ngModel)]="searchTerm" placeholder="Search "
+  />
+
+  <div class="col-md-6 d-inline-block">&nbsp;</div>
+  <div class="col-md-3 d-inline-block">
+    <div class="col-md-6 d-inline-block">
+      {{user.name}}
+    </div>
+    <div class="col-md-6 d-inline-block">
+      <img src="{{user.photo}}" height="30px" width="30px" alt="User">
+    </div>
+
+  </div>
+</div>
